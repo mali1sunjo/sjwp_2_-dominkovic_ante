@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas1</title>
+</head>
+<body>
+    
+    <h2>Canvas1</h2>
+    <canvas id="myCanvas1" width="300" height="300" style="border: 2px solid black;"></canvas>
+    <script>
+        let c = document.getElementById("myCanvas1");
+        let context = c.getContext("2d");
+
+        context.beginPath();
+        context.rect(0,0,100,100);
+        bandwidth = 10; /* mora biti prije filla i stroke-a*/
+        context.strokeStyle = "green";
+        context.stroke();
+        context.fillStyle = "red";
+        context.fill();
+
+        context.beginPath();
+        context.rect(100,100,100,100);
+        context.strokeStyle = "black";  
+        context.stroke();
+
+        context.beginPath();
+        context.rect(200,200,100,100);
+        context.fillStyle = "blue";
+        context.fill();
+
+        
+        
+    
+
+    </script>
+    
+</body>
+</html>

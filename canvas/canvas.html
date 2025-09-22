@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    
+    <h2>Canvas</h2>
+    <canvas id="myCanvas" width="300" height="300" style="border: 2px solid black;"></canvas>
+    <script>
+        let c = document.getElementById("myCanvas");
+        let context = c.getContext("2d");
+
+        /* pravokutnik */
+        context.beginPath();
+        context.rect(0,0,250,250);
+        context.fillStyle = "blue";
+        context.fill();
+        
+        /* krug */
+        context.beginPath();
+        context.arc(320,320,50,0,2*Math.PI);
+        context.fillStyle = "red";
+        context.fill();
+
+        /* pravokutnik s obrubom*/
+        context.beginPath();
+        context.rect(300,20,50,50);
+        /*context.lineWidth = 5;*/ /* mora biti prije filla i stroke-a*/
+        context.strokeStyle = "pink";
+        context.stroke();
+        
+        /* crtanje linija*/
+
+        context.beginPath();
+        context.moveTo(10, 300); /* pocetak linije */
+        context.lineTo(100, 250); /* kraj linije */
+        context.lineTo(100, 350); /* kraj linije */
+        context.lineTo(10, 300); /* kraj linije */
+        context.strokeStyle = "green";
+        context.stroke();
+
+        
+        
+    
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PACMAN</title>
+</head>
+<body>
+    <h2>PACMAN</h2>
+<canvas id="myCanvas" width="300" height="300" style="border: 2px solid black; background-color: #000;"></canvas>
+    
+    <script>
+    
+    let c = document.getElementById("myCanvas");
+        let context = c.getContext("2d");
+
+    context.beginPath();
+    context.arc(150,150,50,0,2*Math.PI);
+    context.fillStyle = "yellow";
+    context.fill();
+
+
+    context.beginPath();
+        context.moveTo(150, 150); /* pocetak linije */
+        context.lineTo(200, 100); /* kraj linije */
+        context.lineTo(200, 200); /* kraj linije */
+        context.lineTo(150, 150); /* kraj linije */
+        context.fillStyle = "black";
+        context.fill();
+
+    context.beginPath();
+    context.arc(150,130,5,0,2*Math.PI);
+    context.fillStyle = "black";
+    context.fill();
+
+    context.beginPath();
+    context.arc(152,130,2,0,2*Math.PI);
+    context.fillStyle = "white";
+    context.fill();
+
+    context.beginPath();
+    context.rect(190,140,20,20);
+    context.fillStyle = "yellow";
+    context.fill();
+
+    context.beginPath();
+    context.rect(230,140,20,20);
+    context.fillStyle = "yellow";
+    context.fill();
+
+    context.beginPath();
+    context.rect(270,140,20,20);
+    context.fillStyle = "yellow";
+    context.fill();
+
+
+
+    </script>
+
+   
+
+</body>
+</html>
