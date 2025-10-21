@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadatak </title>
+
+
+    <style>
+        .Plava{
+            background-color: aqua;
+        }
+
+        .Crvena{
+
+            background-color: red;
+        }
+
+        .Zuta{
+            background-color: yellowgreen;
+        }
+
+    .forma {
+      min-height: 200px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s;
+    }
+    label {
+      display: block;
+      margin: 5px 0;
+    }
+
+    textarea {
+      width: 100%;
+      margin-top: 10px;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <h2>HTML forme</h2>
+
+    <form action="antedominkovic2007@gmail.com" method="post">
+    <label>Ime i prezime:</label>
+    <input type="text" name="ime" required>
+  
+    <label>Email:</label>
+    <input type="email" name="email" required>
+  
+    <label>Poruka:</label>
+    <textarea name="poruka" required></textarea>
+  
+    <button type="submit">Pošalji</button>
+
+<br>
+
+</form>
+
+
+
+<div class="forma">
+    <h3>Izaberite temu poruke:</h3>
+
+    <label for="psl">Poslovno pismo</label>
+    <label for="podrska">Podrška</label>
+    <label for="suradnja">Suradnja</label>
+
+    <input type="radio" name="tema" id="psl" checked>
+    <input type="radio" name="tema" id="podrska">
+    <input type="radio" name="tema" id="suradnja">
+
+    <textarea placeholder="Unesite poruku..." rows="4"></textarea><br>
+    <button>Pošalji</button>
+
+
+  </div>
+
+
+</body>
+</html>
