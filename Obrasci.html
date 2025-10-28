@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8">
+  <title>LV8 – Obrasci</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+    label { display: inline-block; width: 120px; }
+    .range-value { font-weight: bold; margin-left: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Kontakt forma – LV8</h1>
+  <form action="submit.html" method="post" id="kontaktForm">
+    
+    <label for="ime">Ime:</label>
+    <input type="text" id="ime" name="ime" placeholder="Unesite ime" required maxlength="30"><br><br>
+
+    <label for="email">E-pošta:</label>
+    <input type="email" id="email" name="email" placeholder="primjer@domena.hr" required><br><br>
+
+    <label for="lozinka">Lozinka:</label>
+    <input type="password" id="lozinka" name="lozinka" required><br><br>
+
+    <label for="telefon">Telefon:</label>
+    <input type="tel" id="telefon" name="telefon" placeholder="091-123-456"
+           pattern="09[0-9]-[0-9]{3}-[0-9]{3}" required><br><br>
+
+    <label for="godine">Godine:</label>
+    <input type="number" id="godine" name="godine" min="1" max="120" value="18"><br><br>
+
+    <label>Spol:</label>
+    <input type="radio" id="m" name="spol" value="M"><label for="m">M</label>
+    <input type="radio" id="z" name="spol" value="Ž"><label for="z">Ž</label><br><br>
+
+    <label for="interesi">Interesi:</label><br>
+    <input type="checkbox" id="it" name="interesi" value="it"><label for="it">IT</label>
+    <input type="checkbox" id="sport" name="interesi" value="sport"><label for="sport">Sport</label><br><br>
+
+    <label for="opis">Kratki opis:</label><br>
+    <textarea id="opis" name="opis" rows="4" cols="40"
+              maxlength="200" placeholder="Unesite kratak opis..."></textarea><br><br>
+
+    <label for="grad">Grad:</label>
+    <select id="grad" name="grad" required>
+      <option value="">-- odaberite --</option>
+      <option value="sb">Slavonski Brod</option>
+      <option value="zg">Zagreb</option>
+      <option value="os">Osijek</option>
+    </select><br><br>
+
+    <label for="datelist">Pretraži grad:</label>
+    <input list="gradovi" id="datelist" name="datelist">
+    <datalist id="gradovi">
+      <option value="Zagreb">
+      <option value="Split">
+      <option value="Rijeka">
+    </datalist><br><br>
+
+    <label for="fajl">Priloži datoteku:</label>
+    <input type="file" id="fajl" name="fajl"><br><br>
+
+    <!-- Skriveno polje -->
+    <input type="hidden" id="zadatakID" name="zadatakID" value="LV8">
+
+    <!-- Range input -->
+    <label for="zadovoljstvo">Zadovoljstvo:</label>
+    <input type="range" id="zadovoljstvo" name="zadovoljstvo" min="0" max="10" value="5">
+    <span id="zadovoljstvoVrijednost" class="range-value">5</span><br><br>
+
+    <input type="submit" value="Pošalji">
+    <input type="reset" value="Poništi">
+  </form>
+
+  <script>
+    // Prikaz trenutne vrijednosti range inputa
+    const range = document.getElementById('zadovoljstvo');
+    const span = document.getElementById('zadovoljstvoVrijednost');
+    range.addEventListener('input', () => {
+      span.textContent = range.value;
+    });
+  </script>
+</body>
+</html>
