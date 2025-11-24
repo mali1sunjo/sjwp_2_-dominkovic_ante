@@ -1,1 +1,1 @@
-alert("Radi sve");
+document.getElementsByClassName(".btn")
