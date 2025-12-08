@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <title>Text utilities alat</title>
+
+  <style>
+
+h1{
+    font-style: italic;
+}
+
+div{
+  
+    margin-left: 40%;
+}
+
+
+
+body {
+    background-color: lavender;
+    align-self: start;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+}
+
+    h1, h2, p {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        button {
+            margin: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: aliceblue;
+            border-radius: 10px;
+        }
+        label {
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+            font-style: italic;
+            background-color: floralwhite;
+        }
+        div.ispis {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            font-style: italic;
+            width: 200px;
+            border: 3px solid lightblue;
+            border-radius: 10px;
+            align-self: start;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+            
+        }
+
+
+
+  </style>
+</head>
+<body>
+
+    
+
+    
+
+  <h1>Alati za tekst</h1>
+  
+  <form action="#" method="post">
+        <label for="input">Unesi tekst:  </label>
+        <input type="text" id="input" name="input" required><br><br>
+        
+        
+        <hr>
+    </form>
+  <br><br>
+  <button onclick="countChars()">Broj znakova</button>
+  <button onclick="toLower()">Mala slova</button>
+  <button onclick="toUpper()">Velika slova</button>
+  <button onclick="capitalizeFirst()">Prvo slovo veliko</button>
+    <button onclick="clearText()">Očisti tekst</button>
+
+  <h1>Rezultat</h1>
+
+  <div class="ispis">
+
+    <p id="result"></p>
+  </div>
+    
+
+  <script>
+    function countChars() {
+      const text = document.getElementById('input').value;
+      document.getElementById('result').innerText = "Broj znakova: " + text.length;
+    }
+
+    function toLower() {
+      const input = document.getElementById('input');
+      input.value = input.value.toLowerCase();
+      document.getElementById('result').innerText ="Mala slova: " + input.value;
+    }
+
+    function toUpper() {
+      const input = document.getElementById('input');
+      input.value = input.value.toUpperCase();
+      document.getElementById('result').innerText = "Velika slova: " + input.value;
+    }
+
+    function capitalizeFirst() {
+      const input = document.getElementById('input');
+      if (input.value.length > 0) {
+        input.value = input.value.charAt(0).toUpperCase() + input.value.slice(1);
+      }
+      document.getElementById('result').innerText = "Prvo slovo veliko: " + input.value;
+    }
+    function clearText() {
+      document.getElementById('input').value = "";
+      document.getElementById('result').innerText = "";
+    }
+
+
+
+ 
+    </script>
+    <br>
+    <br>
+
+    <img src="beer.jpg" alt="" width="400px" height="300px">
+  
+</body>
+</html>
