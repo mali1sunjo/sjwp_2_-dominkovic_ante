@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prijava Dominkovic</title>
+    <style>
+    h1{
+        font-size: xx-large;
+
+        }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: aliceblue;
+    }
+    label {
+        display:block;
+        margin-top: 15px;
+        font-size: large;
+    }
+
+    input{
+        
+    }
+
+    input:hover{
+        background-color: beige;
+    }
+    select:hover{
+        background-color: beige;
+    }
+    fieldset {
+        margin-bottom: 15px;
+        border-radius: 20px;
+        border-color: aqua;
+        text-decoration:solid;
+        width: 300px;
+    }
+
+    
+</style>
+</head>
+<body>
+
+<h1>Prijava</h1>
+
+<form action="#" method="post">
+
+    <fieldset>
+        <legend>Osobni podaci</legend>
+
+        <label for="ime">Ime i prezime:</label>
+        <input type="text" id="ime" name="ime" required>
+
+        <label for="razred">Razred:</label>
+        <select id="razred" name="razred" required>
+            <option value="">Odaberite razred</option>
+            <option value="1">1. razred</option>
+            <option value="2">2. razred</option>
+            <option value="3">3. razred</option>
+            <option value="4">4. razred</option>
+            <option value="4">5. razred</option>
+            <option value="4">6. razred</option>
+            <option value="4">7. razred</option>
+            <option value="4">8. razred</option>
+        </select>
+    </fieldset>
+    <br>
+
+    <fieldset>
+        <legend>Podaci o projektu</legend>
+
+        <label for="podrucje">Područje projekta:</label>
+        <select id="podrucje" name="podrucje" required>
+            <option value="">Odaberite područje</option>
+            <option value="informatika">Web stranica</option>
+            <option value="priroda">Mobilna aplikacija</option>
+            <option value="umjetnost">Edukativna igra</option>
+            <option value="umjetnost">Zdrava prehrana</option>
+            <option value="umjetnost">Vremenska prognoza</option>
+            <option value="umjetnost">Drugo...</option>
+        </select>
+    </fieldset>
+    <br>
+
+    <button type="submit">Pošalji prijavu</button>
+    <button type="reset">Očisti obrazac</button>
+    
+</form>
+
+</body>
+</html>
+
+
