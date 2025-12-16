@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini elektrotehnički kalkulator</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .container { display: flex; gap: 20px; }
+    .calc { max-width: 450px; }
+    .box { border: 1px solid #ccc; padding: 12px; margin-bottom: 14px; border-radius: 8px; }
+    label { display: inline-block; width: 200px; }
+    input { width: 180px; padding: 4px; }
+    button { margin-top: 10px; }
+    img { max-width: 400px; border: 1px solid #ccc; }
+    form { margin-bottom: 6px; }
+    .ser {
+      width: 300px;
+      height: 250px;
+      margin-top: 70px;
+    }
+
+    .par{
+      height: 200px;
+      width: 300px;
+      margin-top: 50px;
+    }
+
+    .ind1{
+      margin-top: 100px;
+      height: 220px;
+      width: 320px;
+    }
+
+    .reactcaxv{
+      margin-top: 130px;
+      width: 320px;
+      height: 200px;
+    }
+
+    .react2{
+      margin-top: 100px;
+      width: 330px;
+      height: 220px;
+    }
+
+  </style>
+</head>
+<body>
+
+<h1>Mini elektrotehnički kalkulator</h1>
+
+<div class="container">
+  <div class="calc">
+
+    <div class="box">
+      <h3>Ohmov zakon</h3>
+      <form>
+        <label>Unesi napon U (V):</label>
+        <input type="number" id="u" step="any"><br><br>
+        <label>Unesi otpor R (Ω):</label>
+        <input type="number" id="r" step="any"><br>
+      </form>
+      <button onclick="ohm()">Izračunaj</button>
+      <p>I = <span id="iRez">-</span> A</p>
+    </div>
+
+    <div class="box">
+      <h3>Djelitelj napona</h3>
+      <form>
+        <label>Unesi ulazni napon Uin (V):</label>
+        <input type="number" id="uin" step="any"><br><br>
+        <label>Unesi R1 (Ω):</label>
+        <input type="number" id="r1" step="any"><br><br>
+        <label>Unesi R2 (Ω):</label>
+        <input type="number" id="r2" step="any"><br>
+      </form>
+      <button onclick="divider()">Izračunaj</button>
+      <p>Uizl = <span id="uoutRez">-</span> V</p>
+    </div>
+
+    <div class="box">
+      <h3>Serijsko spajanje otpornika</h3>
+      <form>
+        <label>Unesi R1 (Ω):</label>
+        <input type="number" id="sr1" step="any"><br><br>
+        <label>Unesi R2 (Ω):</label>
+        <input type="number" id="sr2" step="any"><br>
+      </form>
+      <button onclick="series()">Izračunaj</button>
+      <p>Rs = <span id="rsRez">-</span> Ω</p>
+    </div>
+
+    <div class="box">
+      <h3>Paralelno spajanje otpornika</h3>
+      <form>
+        <label>Unesi R1 (Ω):</label>
+        <input type="number" id="pr1" step="any"><br><br>
+        <label>Unesi R2 (Ω):</label>
+        <input type="number" id="pr2" step="any"><br>
+      </form>
+      <button onclick="parallel()">Izračunaj</button>
+      <p>Rp = <span id="rpRez">-</span> Ω</p>
+    </div>
+
+    <div class="box">
+      <h3>Induktivitet zračnog svitka</h3>
+      <form>
+        <label>Unesi broj zavoja N:</label>
+        <input type="number" id="n" step="any"><br><br>
+        <label>Unesi površinu S (m²):</label>
+        <input type="number" id="s" step="any"><br><br>
+        <label>Unesi duljinu l (m):</label>
+        <input type="number" id="len" step="any"><br>
+      </form>
+      <button onclick="coil()">Izračunaj</button>
+      <p>L = <span id="lRez">-</span> H</p>
+    </div>
+
+    <div class="box">
+      <h3>Induktivni otpor</h3>
+      <form>
+        <label>Unesi frekvenciju f (Hz):</label>
+        <input type="number" id="f" step="any"><br><br>
+        <label>Unesi induktivitet L (H):</label>
+        <input type="number" id="l2" step="any"><br>
+      </form>
+      <button onclick="xlCalc()">Izračunaj</button>
+      <p>XL = <span id="xlRez">-</span> Ω</p>
+    </div>
+
+    <div class="box">
+      <h3>Kapacitivni otpor</h3>
+      <form>
+        <label>Unesi frekvenciju f (Hz):</label>
+        <input type="number" id="fc" step="any"><br><br>
+        <label>Unesi kapacitet C (F):</label>
+        <input type="number" id="c" step="any"><br>
+      </form>
+      <button onclick="xcCalc()">Izračunaj</button>
+      <p>XC = <span id="xcRez">-</span> Ω</p>
+    </div>
+
+  </div>
+
+  <div>
+    
+    <img src="/ocjenazadatak1/ohmov zakon.jpg" alt="">
+    <br>
+    <img src="/ocjenazadatak1/djelilo napona.jpg" alt="">
+    <br>
+    <img src="/ocjenazadatak1/serijski.png" alt="" class="ser">
+    <br>
+    <img src="/ocjenazadatak1/paralel.png" alt="" class="par">
+    <br>
+    <img src="/ocjenazadatak1/indukt1.jpg" alt="" class="ind1">
+    <br>
+    <img src="/ocjenazadatak1/reactcaxv.png" alt="" class="reactcaxv">
+    <br>
+    <img src="/ocjenazadatak1/react2.png" alt="" class="react2">
+    <br>
+  </div>
+</div>
+
+
+<script>
+  function ohm() { iRez.textContent = (u.value / r.value).toFixed(3); }
+  function divider() { uoutRez.textContent = (uin.value * r2.value / (Number(r1.value) + Number(r2.value))).toFixed(3); }
+  function series() { rsRez.textContent = (Number(sr1.value) + Number(sr2.value)).toFixed(3); }
+  function parallel() { rpRez.textContent = (1 / (1 / pr1.value + 1 / pr2.value)).toFixed(3); }
+  function coil() {
+    const mu0 = 4 * Math.PI * 1e-7;
+    lRez.textContent = (mu0 * n.value * n.value * s.value / len.value).toExponential(3);
+  }
+  function xlCalc() { xlRez.textContent = (2 * Math.PI * f.value * l2.value).toFixed(3); }
+  function xcCalc() { xcRez.textContent = (1 / (2 * Math.PI * fc.value * c.value)).toFixed(3); }
+</script>
+
+</body>
+</html>
+
