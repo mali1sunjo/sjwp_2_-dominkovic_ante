@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weight Converter</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+
+            /* NEW: center everything */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .main {
+            text-align: center;
+            width: 300px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .box {
+            padding: 20px;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .pounds {
+            text-align: left;
+            background-color: blue;
+        }
+
+        .ounces {
+            text-align: left;
+            background-color: green;
+        }
+
+        .grams {
+            text-align: left;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <h2>Weight Converter</h2>
+
+        <input type="number" id="kgInput" placeholder="Enter weight in kg">
+        <button onclick="convertWeight()">Convert</button>
+
+        <div class="container">
+            <div class="box pounds">
+                Pounds:<br>
+                 <span id="pounds">0</span>
+                
+            </div>
+
+            <div class="box ounces">
+                Ounces:<br> <span id="ounces">0</span>
+            </div>
+
+            <div class="box grams">
+                Grams:<br> <span id="grams">0</span>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function convertWeight() {
+            const kg = document.getElementById("kgInput").value;
+            if (kg === "") return;
+
+            document.getElementById("pounds").innerText = (kg * 2.20462).toFixed(2);
+            document.getElementById("ounces").innerText = (kg * 35.274).toFixed(2);
+            document.getElementById("grams").innerText = (kg * 1000).toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
+

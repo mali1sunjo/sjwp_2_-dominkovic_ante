@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Converter</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .main {
+            text-align: center;
+            width: 300px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .box {
+            padding: 20px;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .celsius {
+            background-color: blue;
+        }
+
+        .fahrenheit {
+            background-color: green;
+        }
+
+        .kelvin {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <h2>Temperature Converter (Celsius)</h2>
+
+        <input type="number" id="cInput" placeholder="Enter temperature in °C">
+        <button onclick="convertTemp()">Convert</button>
+
+        <div class="container">
+            <div class="box celsius">
+                Celsius: <span id="celsius">0</span> °C
+            </div>
+
+            <div class="box fahrenheit">
+                Fahrenheit: <span id="fahrenheit">0</span> °F
+            </div>
+
+            <div class="box kelvin">
+                Kelvin: <span id="kelvin">0</span> K
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function convertTemp() {
+            const c = document.getElementById("cInput").value;
+            if (c === "") return;
+
+            document.getElementById("celsius").innerText = Number(c).toFixed(2);
+            document.getElementById("fahrenheit").innerText = ((c * 9/5) + 32).toFixed(2);
+            document.getElementById("kelvin").innerText = (Number(c) + 273.15).toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
