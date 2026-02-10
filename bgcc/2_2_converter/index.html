@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Kripto</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    
+    input {
+        margin-right: 10px;
+        padding: 5px;
+    }
+    
+    button {
+        padding: 5px 10px;
+    }
+    
+    p {
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+
+</style>
+
+<body>
+
+  <h2>Bitcoin konverter</h2>
+  <input type="number" id="btcAmount" placeholder="Unesi BTC" step="any">
+  <button onclick="convertBTC()">Izracunaj</button>
+  <p id="btcResult"></p>
+
+  <hr>
+
+  <h2>Eteerium konverter</h2>
+  <input type="number" id="ethAmount" placeholder="Unesi ETH" step="any">
+  <button onclick="convertETH()">Izracunaj</button>
+  <p id="ethResult"></p>
+
+  <script>
+const BTC_EUR = 64690;
+const BTC_USD = 76685;
+const ETH_EUR = 1881;
+const ETH_USD = 2230;
+
+function convertBTC() {
+  const amount = document.getElementById("btcAmount").value;
+  document.getElementById("btcResult").innerText =
+    (amount * BTC_EUR) + " EUR | " + (amount * BTC_USD) + " USD";
+}
+
+
+
+function convertETH() {
+  const amount = document.getElementById("ethAmount").value;
+  document.getElementById("ethResult").innerText =
+    (amount * ETH_EUR) + " EUR | " + (amount * ETH_USD) + " USD";
+}
+
+</script>
+<!-- asfjdjriwirjfirwjfjijjjijirijrfjijifhfhfhfhfhfhfhhfhfhfhhfhfhfhfhfhfhfhfhfhhfhfhhhf*sadasd*/ -->
+</body>
+</html>
+

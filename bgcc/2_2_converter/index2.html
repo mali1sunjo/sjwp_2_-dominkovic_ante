@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kamen - Škare - Papir</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            text-align: center;
+            padding-top: 50px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 15px 25px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #rezultat {
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Kamen - Škare - Papir</h1>
+
+    <button onclick="igraj('kamen')">Kamen</button>
+    <button onclick="igraj('skare')">Škare</button>
+    <button onclick="igraj('papir')">Papir</button>
+
+    <div id="rezultat"></div>
+
+    <script>
+        function igraj(igrac) {
+            const opcije = ["kamen", "skare", "papir"];
+            const bot = opcije[Math.floor(Math.random() * 3)];
+
+            let poruka = `Igrac: ${igrac}<br>Bot: ${bot}<br>`;
+
+            if (igrac === bot) {
+                poruka += "Neriješeno!";
+            } else if (
+                (igrac === "kamen" && bot === "skare") ||
+                (igrac === "skare" && bot === "papir") ||
+                (igrac === "papir" && bot === "kamen")
+            ) {
+                poruka += "Pobijedio si!";
+            } else {
+                poruka += "Izgubio si!";
+            }
+
+            document.getElementById("rezultat").innerHTML = poruka;
+        }
+    </script>
+
+</body>
+</html>
