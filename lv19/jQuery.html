@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery LAB</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+#kartica{
+    width:250px;
+    padding:20px;
+    background:lightgray;
+    border-radius:10px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.velika{
+    transform:scale(1.1);
+}
+
+.crveno{
+    color:red;
+}
+</style>
+
+
+</head>
+<body>
+
+<h1>Dobrodošli u jQuery LAB</h1>
+
+<p id="tekst">Ovo je primjer paragrafa koji ćemo sakriti i prikazati.</p>
+
+
+<button id="sakrij">Sakrij</button>
+<button id="prikazi">Prikaži</button>
+
+<hr>
+
+
+<button id="toggle">Toggle tekst</button>
+<button id="boja">Promijeni boju</button>
+
+<hr>
+
+
+<button id="fade">Fade efekt</button>
+<button id="slide">Slide efekt</button>
+
+<hr>
+
+
+<input type="text" id="unos" placeholder="Upiši novi tekst">
+<button id="promijeniTekst">Promijeni sadržaj</button>
+
+<hr>
+
+<h2>Kartica</h2>
+<div id="kartica">
+    <p>Ja sam interaktivna kartica</p>
+    <button id="sakrijKarticu">Sakrij karticu</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
