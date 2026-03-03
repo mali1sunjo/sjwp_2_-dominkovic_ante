@@ -1,68 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="hr">
 <head>
     <meta charset="UTF-8">
     <title>jQuery LAB</title>
+
+    <!-- jQuery biblioteka -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+    <!-- CSS stilovi -->
     <style>
-#kartica{
-    width:250px;
-    padding:20px;
-    background:lightgray;
-    border-radius:10px;
-    text-align:center;
-    transition:0.3s;
-}
+        body{
+            font-family: Arial, sans-serif;
+        }
 
-.velika{
-    transform:scale(1.1);
-}
+        #kartica{
+            width:250px;
+            padding:20px;
+            background:lightgray;
+            border-radius:10px;
+            text-align:center;
+            transition:0.3s;
+            margin-top:20px;
+        }
 
-.crveno{
-    color:red;
-}
-</style>
+        .velika{
+            transform:scale(1.1);
+        }
 
-
+        .crveno{
+            color:red;
+        }
+    </style>
 </head>
+
 <body>
 
 <h1>Dobrodošli u jQuery LAB</h1>
 
 <p id="tekst">Ovo je primjer paragrafa koji ćemo sakriti i prikazati.</p>
 
-
+<!-- Zadatak 1 -->
 <button id="sakrij">Sakrij</button>
 <button id="prikazi">Prikaži</button>
 
 <hr>
 
-
+<!-- Zadatak 2 -->
 <button id="toggle">Toggle tekst</button>
 <button id="boja">Promijeni boju</button>
 
 <hr>
 
-
+<!-- Zadatak 3 -->
 <button id="fade">Fade efekt</button>
 <button id="slide">Slide efekt</button>
 
 <hr>
 
-
+<!-- Zadatak 4 -->
 <input type="text" id="unos" placeholder="Upiši novi tekst">
 <button id="promijeniTekst">Promijeni sadržaj</button>
 
 <hr>
 
+<!-- Mini projekt -->
 <h2>Kartica</h2>
 <div id="kartica">
     <p>Ja sam interaktivna kartica</p>
     <button id="sakrijKarticu">Sakrij karticu</button>
 </div>
 
+<!-- Povezivanje vanjskog JS fajla -->
 <script src="script.js"></script>
-</body>
 
+</body>
 </html>
