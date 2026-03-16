@@ -1,0 +1,3 @@
+Duzina: 5, Visina: 4, Povrsina: 20
+Duzina: 1, Visina: 1, Povrsina: 1
+Duzina: 1, Visina: 1, Povrsina: 1
