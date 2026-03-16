@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MovieHub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>MovieHub</h1>
+<input type="text" placeholder="Search movies...">
+</header>
+
+<section class="movies" id="moviesContainer"></section>
+
+<div id="modal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal()">&times;</span>
+<h2 id="title"></h2>
+<p id="year"></p>
+<p id="genre"></p>
+<p id="desc"></p>
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
