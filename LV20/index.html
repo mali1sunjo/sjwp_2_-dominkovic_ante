@@ -2,97 +2,78 @@
 <html lang="hr">
 <head>
     <meta charset="UTF-8">
-    <title>Moja web stranica</title>
+    <title>LV19</title>
 
     <style>
-        /* =========================
-           1. DIO – OSNOVNI SELEKTORI
-        ========================== */
+      
 
-        /* 1. Selektor elementa */
         p {
             color: darkblue;
         }
 
-        /* 2. Selektor klase */
         .posebna {
             background-color: yellow;
         }
 
-        /* 3. Selektor ID-a */
         #glavniPodnaslov {
             font-size: 28px;
         }
 
-        /* 4. Grupiranje selektora */
         h1, h2 {
             font-family: Arial, sans-serif;
             color: darkred;
         }
 
-        /* =========================
-           2. DIO – KOMBINIRANI SELEKTORI
-        ========================== */
+     
 
-        /* 1. Selektor potomka */
         div p {
             color: green;
         }
 
-        /* 2. Selektor djeteta */
         div > p {
             font-weight: bold;
         }
 
-        /* 3. Kombinacija klase i elementa */
         .container ul {
             border: 2px solid black;
             padding: 10px;
         }
 
-        /* 4. Susjedni selektor */
         h2 + p {
             background-color: lightgray;
         }
 
-        /* =========================
-           3. DIO – FILTRI I PSEUDO-KLASE
-        ========================== */
+     
 
-        /* 1. Prvo dijete */
         ul li:first-child {
             color: red;
         }
 
-        /* 2. Zadnje dijete */
         ul li:last-child {
             color: blue;
         }
 
-        /* 3. Neparne stavke */
         ul li:nth-child(odd) {
             background-color: #f2f2f2;
         }
 
-        /* 4. Treća stavka */
+ 
         ul li:nth-child(3) {
             font-size: 20px;
         }
 
-        /* 5. Svi osim klase .posebna */
+       
         li:not(.posebna) {
             font-style: italic;
         }
 
-        /* 6. Hover efekt */
+       
         li:hover {
             background-color: orange;
             cursor: pointer;
         }
 
-        /* =========================
-           DODATNI ZADATAK – NAVIGACIJA
-        ========================== */
+      
 
         nav ul {
             list-style: none;
@@ -105,13 +86,13 @@
             background-color: lightblue;
         }
 
-        /* Hover efekt */
+       
         nav ul li:hover {
             background-color: darkblue;
             color: white;
         }
 
-        /* Parne stavke */
+       
         nav ul li:nth-child(even) {
             background-color: lightgreen;
         }
@@ -137,7 +118,7 @@
         <li>Stavka 5</li>
     </ul>
 
-    <!-- 2. DIO -->
+  
     <div class="container">
         <p>Odlomak unutar div-a 1</p>
         <p>Odlomak unutar div-a 2</p>
@@ -149,7 +130,7 @@
         </ul>
     </div>
 
-    <!-- DODATNI ZADATAK -->
+   
     <nav>
         <ul>
             <li>Početna</li>
