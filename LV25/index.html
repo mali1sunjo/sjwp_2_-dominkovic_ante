@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakt obrazac</title>
+
+    <style>
+        
+
+        input {
+            width: 250px;
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        label {
+            font-weight: bold;
+            color: darkblue;
+            display: block;
+        }
+
+        input[type="text"] {
+            background-color: #e6f2ff;
+        }
+
+        input[type="email"] {
+            border: 2px solid green;
+        }
+
+        input[type="password"] {
+            background-color: #ffe6e6;
+            border: 2px dashed red;
+        }
+
+        select {
+            padding: 5px;
+            background-color: #f2f2f2;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            background-color: steelblue;
+            color: white;
+            cursor: pointer;
+        }
+
+     
+
+        input:focus {
+            border: 2px solid orange;
+            outline: none;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        input:required {
+            border-left: 5px solid red;
+        }
+
+        input:checked {
+            accent-color: purple;
+        }
+
+        input:disabled {
+            background-color: #ccc;
+        }
+
+        input:valid {
+            background-color: #d4edda;
+        }
+
+        input:invalid {
+            background-color: #f8d7da;
+        }
+
+        
+
+        form input {
+            border-radius: 5px;
+        }
+
+        form > label {
+            margin-top: 10px;
+        }
+
+        .forma-grupa input:focus {
+            background-color: #ffffcc;
+        }
+
+        input[type="checkbox"]:checked {
+            transform: scale(1.2);
+        }
+
+        input[type="radio"]:checked {
+            accent-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Kontakt obrazac</h1>
+
+    <form>
+
+        <div class="forma-grupa">
+            <label for="ime">Ime:</label>
+            <input type="text" id="ime" required>
+        </div>
+
+        <div class="forma-grupa">
+            <label for="prezime">Prezime:</label>
+            <input type="text" id="prezime" required>
+        </div>
+
+        <div class="forma-grupa">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="forma-grupa">
+            <label for="lozinka">Lozinka:</label>
+            <input type="password" id="lozinka" required>
+        </div>
+
+        <div class="forma-grupa">
+            <label for="datum">Datum rođenja:</label>
+            <input type="date" id="datum">
+        </div>
+
+        <div class="forma-grupa">
+            <label for="razred">Razred:</label>
+            <select id="razred">
+                <option>1.</option>
+                <option>2.</option>
+                <option>3.</option>
+                <option>4.</option>
+            </select>
+        </div>
+
+        <div class="forma-grupa">
+            <label>Spol:</label>
+            <input type="radio" name="spol"> Muško
+            <input type="radio" name="spol"> Žensko
+        </div>
+
+        <div class="forma-grupa">
+            <label>
+                <input type="checkbox"> Prihvaćam uvjete
+            </label>
+        </div>
+
+        <div class="forma-grupa">
+            <label>Onemogućeno polje:</label>
+            <input type="text" disabled value="Ne može se uređivati">
+        </div>
+
+        <button type="submit">Pošalji</button>
+        <button type="reset">Poništi</button>
+
+    </form>
+
+</body>
+</html>
