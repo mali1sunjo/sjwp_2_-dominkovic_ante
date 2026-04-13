@@ -1,0 +1,9 @@
+body{margin:0;font-family:Segoe UI,Arial;background:#f4f6f9;color:#1f2d3d}
+.sidebar{width:260px;position:fixed;height:100%;background:#1f2d3d;padding:20px;color:white;overflow:auto}
+.sidebar a{display:block;color:#cfd8e3;text-decoration:none;margin:6px 0;padding:8px;border-radius:6px}
+.sidebar a:hover{background:#34495e;color:white}
+.content{margin-left:280px;padding:25px;max-width:1000px}
+.card{background:white;padding:20px;border-radius:12px;margin-bottom:20px;box-shadow:0 5px 15px rgba(0,0,0,0.1)}
+pre{background:#2d2d2d;color:#f1f1f1;padding:12px;border-radius:8px;overflow:auto}
+.result{border:1px solid #ddd;padding:10px;border-radius:8px;margin-top:10px}
+h1,h2{margin-top:0}
