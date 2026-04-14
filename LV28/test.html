@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ispit – Web dizajn</title>
+
+    <style>
+ 
+        p {
+            color: #333;
+        }
+
+        .container {
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+
+        #glavni {
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        h1, h2 {
+            color: darkblue;
+        }
+
+       
+        div p {
+            font-style: italic;
+        }
+
+        div > p {
+            color: green;
+        }
+
+        .container ul {
+            color: red;
+        }
+
+        h2 + p {
+            background-color: lightyellow;
+        }
+
+     
+        li:first-child {
+            font-weight: bold;
+        }
+
+        li:last-child {
+            color: blue;
+        }
+
+        li:nth-child(odd) {
+            background-color: #eee;
+        }
+
+        li:nth-child(3) {
+            color: purple;
+        }
+
+        p:not(.posebna) {
+            border-left: 3px solid gray;
+            padding-left: 5px;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+   
+        .nav li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .nav li:hover {
+            background-color: yellow;
+        }
+
+        .nav li:nth-child(even) {
+            color: green;
+        }
+
+     
+        input {
+            display: block;
+            margin: 5px 0;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            background-color: #e6f7ff;
+        }
+
+        input[type="email"] {
+            background-color: #fff0f0;
+        }
+
+        input[type="password"] {
+            background-color: #f9f9d1;
+        }
+
+        select {
+            margin: 5px 0;
+        }
+
+        button {
+            margin-top: 10px;
+        }
+
+     
+        input:focus {
+            border: 2px solid blue;
+        }
+
+        input:hover {
+            background-color: #ddd;
+        }
+
+        input:required {
+            border-left: 4px solid red;
+        }
+
+        input:checked {
+            outline: 2px solid green;
+        }
+
+        input:valid {
+            border-color: green;
+        }
+
+        input:invalid {
+            border-color: red;
+        }
+
+        input:disabled {
+            background-color: #ccc;
+        }
+
+       
+        form input {
+            padding: 5px;
+        }
+
+        form > label {
+            color: darkred;
+        }
+
+        .forma-grupa input:focus {
+            background-color: #ccf;
+        }
+
+        input[type="checkbox"]:checked {
+            accent-color: green;
+        }
+
+        input[type="radio"]:checked {
+            accent-color: blue;
+        }
+    </style>
+</head>
+
+<body id="glavni">
+
+  
+    <h1>Naslov stranice</h1>
+
+    <h2>Podnaslov 1</h2>
+    <p>Prvi odlomak</p>
+
+    <h2>Podnaslov 2</h2>
+    <p>Drugi odlomak</p>
+
+    <p class="posebna">Treći odlomak (posebna)</p>
+    <p>Četvrti odlomak</p>
+
+    <ul>
+        <li>Stavka 1</li>
+        <li>Stavka 2</li>
+        <li>Stavka 3</li>
+        <li>Stavka 4</li>
+        <li>Stavka 5</li>
+    </ul>
+
+    <div class="container">
+        <p>Odlomak u containeru 1</p>
+        <p>Odlomak u containeru 2</p>
+
+        <ul>
+            <li>Item A</li>
+            <li>Item B</li>
+            <li>Item C</li>
+        </ul>
+    </div>
+
+  
+    <ul class="nav">
+        <li><a href="#">Početna</a></li>
+        <li><a href="#">O nama</a></li>
+        <li><a href="#">Usluge</a></li>
+        <li><a href="#">Kontakt</a></li>
+    </ul>
+
+   
+    <form>
+        <div class="forma-grupa">
+            <label>Ime i prezime:</label>
+            <input type="text" required>
+        </div>
+
+        <div class="forma-grupa">
+            <label>Email:</label>
+            <input type="email" required>
+        </div>
+
+        <div class="forma-grupa">
+            <label>Lozinka:</label>
+            <input type="password" required>
+        </div>
+
+        <div class="forma-grupa">
+            <label>Datum rođenja:</label>
+            <input type="date">
+        </div>
+
+        <div class="forma-grupa">
+            <label>Smjer:</label>
+            <select>
+                <option>Web dizajn</option>
+                <option>Programiranje mobilnih uredaja</option>
+                <option>Napredno i objektno programiranje</option>
+                <option>Dizajn baza podataka</option>
+            </select>
+        </div>
+
+        <div class="forma-grupa">
+            <label>Spol:</label>
+            <input type="radio" name="spol"> Muško
+            <input type="radio" name="spol"> Žensko
+        </div>
+
+        <div class="forma-grupa">
+            <label>
+                <input type="checkbox"> Prihvaćam uvjete
+            </label>
+        </div>
+
+        <button type="submit">Pošalji</button>
+        <button type="reset">Reset</button>
+    </form>
+
+</body>
+</html>
