@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CSS osnove: selektori, boje, tipografija, box model, interakcije i varijable.">
+  <title>Web Učilica | CSS osnove</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
+
+  <div class="site-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">&lt;/&gt;</div>
+        <div>
+          <strong>Web Učilica</strong>
+          <p>HTML &amp; CSS vodič</p>
+        </div>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">🌙 Tamna tema</button>
+      <nav class="sidebar-nav" aria-label="Glavna navigacija">
+        <a class="nav-link" href="index.html">Početna</a>
+        <a class="nav-link" href="html-osnove.html">HTML osnove</a>
+        <a class="nav-link" href="html-elementi.html">HTML elementi</a>
+        <a class="nav-link" href="css-osnove.html">CSS osnove</a>
+        <a class="nav-link" href="css-layout.html">CSS layout</a>
+        <a class="nav-link" href="primjeri.html">Primjeri</a>
+        <a class="nav-link" href="mini-projekt.html">Mini projekt</a>
+
+      </nav>
+    </aside>
+
+    <div class="page">
+      <header class="topbar">
+        <p class="breadcrumbs">Web Učilica / CSS osnove</p>
+        <span class="badge">Stiliziranje sadržaja</span>
+      </header>
+
+      <main id="glavni-sadrzaj" class="content" tabindex="-1">
+        <section class="hero">
+          <div class="hero-grid">
+            <div>
+              <h1>CSS osnove</h1>
+              <p>CSS je zadužen za izgled web stranice. Njime mijenjaš boje, veličine, fontove, razmake, obrube, hover efekte i puno više. Dobar CSS ne samo da uljepšava stranicu, nego i čini sadržaj preglednijim.</p>
+            </div>
+            <div class="panel">
+              <h3>Što trebaš znati</h3>
+              <ul class="list-clean">
+                <li>pravilo = selektor + deklaracije</li>
+                <li>svojstvo određuje što mijenjaš</li>
+                <li>vrijednost određuje kako izgleda</li>
+                <li>CSS djeluje na HTML elemente</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson">
+          <div class="lesson-head">
+            <div>
+              <h2>Selektori, boje i tipografija</h2>
+              <p>Prvo nauči kako “uhvatiti” element i promijeniti mu izgled.</p>
+            </div>
+            <span class="pill">Temeljni alati</span>
+          </div>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Primjer osnovnog selektora</h3>
+              <span class="pill">Primjer 1</span>
+            </div>
+            <p>Ovim pravilom ciljaš paragraf unutar određenog bloka i mijenjaš mu boju i debljinu.</p>
+            <div class="split-example">
+              <div class="code-box">
+                <span class="label">Kod</span>
+                <pre><code data-lang="css">.selector-demo p {
+  color: #0f766e;
+  font-weight: 700;
+}</code></pre>
+              </div>
+              <div class="render-box">
+                <span class="label">Rezultat</span>
+                <div class="render-inner selector-demo">
+                  <div class="demo-card">
+                    <p>Ovaj tekst je odabran selektorom i izgleda naglašenije.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Primjer boje i pozadine</h3>
+              <span class="pill">Primjer 2</span>
+            </div>
+            <p>CSS lako stvara vizualni identitet stranice pomoću boje teksta, pozadine i zaobljenih rubova.</p>
+            <div class="split-example">
+              <div class="code-box">
+                <span class="label">Kod</span>
+                <pre><code data-lang="css">.color-demo {
+  background: linear-gradient(135deg, #0f766e, #2563eb);
+  color: white;
+  padding: 1rem;
+  border-radius: 16px;
+}</code></pre>
+              </div>
+              <div class="render-box">
+                <span class="label">Rezultat</span>
+                <div class="render-inner">
+                  <div class="color-demo">
+                    Ovaj blok ima gradijentnu pozadinu i svijetli tekst.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Primjer tipografije</h3>
+              <span class="pill">Primjer 3</span>
+            </div>
+            <p>Dobro uređena tipografija čini sadržaj profesionalnijim i lakšim za čitanje.</p>
+            <div class="split-example">
+              <div class="code-box">
+                <span class="label">Kod</span>
+                <pre><code data-lang="css">.typography-demo h3 {
+  font-size: 1.6rem;
+  letter-spacing: -0.02em;
+}
+
+.typography-demo p {
+  line-height: 1.7;
+}</code></pre>
+              </div>
+              <div class="render-box">
+                <span class="label">Rezultat</span>
+                <div class="render-inner typography-demo">
+                  <h3>Naslov s boljom hijerarhijom</h3>
+                  <p>Paragraf s dovoljno prostora između redaka mnogo je ugodniji za čitanje od zbijenog teksta.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="info-grid">
+            <p class="tip"><strong>Savjet:</strong> Uzmi 2–3 glavne boje i ponavljaj ih dosljedno kroz cijelu stranicu.</p>
+            <p class="mistake"><strong>Česta pogreška:</strong> Nemoj koristiti previše različitih fontova i boja na istoj stranici.</p>
+            <p class="exercise"><strong>Vježba:</strong> Napravi blok s naslovom, paragrafom i gradijentnom pozadinom po uzoru na gornji primjer.</p>
+          </div>
+        </section>
+
+        <section class="lesson">
+          <div class="lesson-head">
+            <div>
+              <h2>Box model, interakcije i varijable</h2>
+              <p>Kad savladaš razmake i hover efekte, dizajn izgleda puno profesionalnije.</p>
+            </div>
+            <span class="pill">Napredniji temelj</span>
+          </div>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Primjer box modela</h3>
+              <span class="pill">Primjer 4</span>
+            </div>
+            <p>Svaki element u CSS-u ponaša se kao kutija: sadržaj, padding, border i margin.</p>
+            <div class="split-example">
+              <div class="code-box">
+                <span class="label">Kod</span>
+                <pre><code data-lang="css">.demo-box {
+  padding: 1rem 1.25rem;
+  border: 4px solid #0f766e;
+  margin-top: 0.75rem;
+}</code></pre>
+              </div>
+              <div class="render-box">
+                <span class="label">Rezultat</span>
+                <div class="render-inner box-model-demo">
+                  <p>Vanjski tekst</p>
+                  <div class="demo-box">Ovo je sadržaj unutar box model kutije.</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Primjer hover efekta i CSS varijable</h3>
+              <span class="pill">Primjer 5</span>
+            </div>
+            <p>Varijable čine dizajn dosljednim, a hover daje osjećaj interakcije.</p>
+            <div class="split-example">
+              <div class="code-box">
+                <span class="label">Kod</span>
+                <pre><code data-lang="css">:root {
+  --glavna-boja: #0f766e;
+}
+
+.gumb {
+  background: var(--glavna-boja);
+  color: white;
+  border-radius: 12px;
+}
+
+.gumb:hover {
+  transform: translateY(-2px);
+}</code></pre>
+              </div>
+              <div class="render-box">
+                <span class="label">Rezultat</span>
+                <div class="render-inner interaction-demo variable-demo">
+                  <p>Pređi mišem preko gumba:</p>
+                  <button class="demo-button" type="button">Pošalji poruku</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="info-grid">
+            <p class="tip"><strong>Savjet:</strong> Kad god više puta koristiš istu boju, smisli CSS varijablu. Tako se dizajn lakše održava.</p>
+            <p class="mistake"><strong>Česta pogreška:</strong> Početnici često zaborave da padding povećava unutarnji razmak, a margin vanjski.</p>
+            <p class="exercise"><strong>Vježba:</strong> Napravi karticu koja ima obrub, padding, pozadinu i gumb s hover efektom.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Sljedeći korak: otvori <a href="css-layout.html">CSS layout</a> i nauči rasporediti sadržaj pomoću Flexboxa i Grida.</p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

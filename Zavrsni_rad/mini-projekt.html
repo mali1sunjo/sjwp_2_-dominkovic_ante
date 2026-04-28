@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mini projekt: izrada jednostavne portfolio stranice korak po korak.">
+  <title>Web Učilica | Mini projekt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
+
+  <div class="site-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">&lt;/&gt;</div>
+        <div>
+          <strong>Web Učilica</strong>
+          <p>HTML &amp; CSS vodič</p>
+        </div>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">🌙 Tamna tema</button>
+      <nav class="sidebar-nav" aria-label="Glavna navigacija">
+        <a class="nav-link" href="index.html">Početna</a>
+        <a class="nav-link" href="html-osnove.html">HTML osnove</a>
+        <a class="nav-link" href="html-elementi.html">HTML elementi</a>
+        <a class="nav-link" href="css-osnove.html">CSS osnove</a>
+        <a class="nav-link" href="css-layout.html">CSS layout</a>
+        <a class="nav-link" href="primjeri.html">Primjeri</a>
+        <a class="nav-link" href="mini-projekt.html">Mini projekt</a>
+      
+      </nav>
+    </aside>
+
+    <div class="page">
+      <header class="topbar">
+        <p class="breadcrumbs">Web Učilica / Mini projekt</p>
+        <span class="badge">Korak po korak</span>
+      </header>
+
+      <main id="glavni-sadrzaj" class="content" tabindex="-1">
+        <section class="hero">
+          <div class="hero-grid">
+            <div>
+              <h1>Mini projekt: jednostavni portfolio</h1>
+              <p>U ovoj cjelini od naučenih elemenata i stilova slažemo malu portfolio stranicu. Ovo je odličan završni korak jer pokazuje kako se mali primjeri spajaju u jednu smislenu, cjelovitu web stranicu.</p>
+            </div>
+            <div class="panel">
+              <h3>Što projekt sadrži</h3>
+              <ul class="list-clean">
+                <li>hero sekciju s naslovom</li>
+                <li>blok o meni i vještinama</li>
+                <li>kartice projekata</li>
+                <li>završni footer</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="steps">
+          <article class="step">
+            <h2>Definiraj osnovni kostur</h2>
+            <p>Najprije postavi glavnu strukturu stranice: zaglavlje, glavni sadržaj i podnožje.</p>
+          </article>
+          <article class="step">
+            <h2>Dodaj hero sekciju</h2>
+            <p>Hero je prvi dojam stranice. U njemu korisnik odmah vidi tko si i što radiš.</p>
+          </article>
+          <article class="step">
+            <h2>Prikaži vještine</h2>
+            <p>Koristi kartice ili oznake za pregledno predstavljanje svojih tehnologija.</p>
+          </article>
+          <article class="step">
+            <h2>Dodaj projekte</h2>
+            <p>Svaki projekt prikaži kao karticu s naslovom, opisom i tehnologijama.</p>
+          </article>
+          <article class="step">
+            <h2>Završi footerom</h2>
+            <p>Na dnu stranice dodaj kontakt ili kratku završnu poruku.</p>
+          </article>
+        </section>
+
+        <section class="lesson">
+          <div class="lesson-head">
+            <div>
+              <h2>Izrada dijelova projekta</h2>
+              <p>Svaki dio gradiš odvojeno, a zatim ih sve spojiš u jednu cjelinu.</p>
+            </div>
+            <span class="pill">Projektni blokovi</span>
+          </div>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Korak: hero sekcija</h3>
+              <span class="pill">Primjer 1</span>
+            </div>
+            <p>Hero sadrži tvoje ime, kratak opis i poziv na akciju.</p>
+            <div class="split-example">
+              <div class="code-box">
+                <span class="label">Kod</span>
+                <pre><code data-lang="html"><section class="portfolio-hero">
+  <h1>Ime Prezime</h1>
+  <p>Učenik koji uči HTML i CSS.</p>
+  <a href="#projekti">Pogledaj projekte</a>
+</section></code></pre>
+              </div>
+              <div class="render-box">
+                <span class="label">Rezultat</span>
+                <div class="render-inner portfolio-demo">
+                  <section class="portfolio-hero">
+                    <h1>Ime Prezime</h1>
+                    <p>Učenik koji uči HTML i CSS.</p>
+                    <a class="demo-button" href="#projekti">Pogledaj projekte</a>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Korak: vještine</h3>
+              <span class="pill">Primjer 2</span>
+            </div>
+            <p>Vještine se mogu prikazati kratko i uredno, bez velikih odlomaka.</p>
+            <div class="split-example">
+              <div class="code-box">
+                <span class="label">Kod</span>
+                <pre><code data-lang="html"><section class="portfolio-skills">
+  <div>HTML5</div>
+  <div>CSS3</div>
+  <div>Responsive dizajn</div>
+  <div>Flexbox i Grid</div>
+</section></code></pre>
+              </div>
+              <div class="render-box">
+                <span class="label">Rezultat</span>
+                <div class="render-inner portfolio-demo">
+                  <section class="portfolio-skills">
+                    <div>HTML5</div>
+                    <div>CSS3</div>
+                    <div>Responsive dizajn</div>
+                    <div>Flexbox i Grid</div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Korak: projekti kao kartice</h3>
+              <span class="pill">Primjer 3</span>
+            </div>
+            <p>Kartice projekata brzo daju profesionalan dojam i lako se ponavljaju.</p>
+            <div class="split-example">
+              <div class="code-box">
+                <span class="label">Kod</span>
+                <pre><code data-lang="html"><section class="portfolio-projects">
+  <article>
+    <h3>Školska stranica</h3>
+    <p>Projekt napravljen u HTML-u i CSS-u.</p>
+  </article>
+
+  <article>
+    <h3>Mini portfolio</h3>
+    <p>Osobna stranica s projektima i kontaktom.</p>
+  </article>
+</section></code></pre>
+              </div>
+              <div class="render-box">
+                <span class="label">Rezultat</span>
+                <div class="render-inner portfolio-demo">
+                  <section class="portfolio-projects" id="projekti">
+                    <article>
+                      <h3>Školska stranica</h3>
+                      <p>Projekt napravljen u HTML-u i CSS-u.</p>
+                    </article>
+                    <article>
+                      <h3>Mini portfolio</h3>
+                      <p>Osobna stranica s projektima i kontaktom.</p>
+                    </article>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Korak: footer</h3>
+              <span class="pill">Primjer 4</span>
+            </div>
+            <p>Footer zatvara stranicu i ostavlja uredan završni dojam.</p>
+            <div class="split-example">
+              <div class="code-box">
+                <span class="label">Kod</span>
+                <pre><code data-lang="html"><footer>
+  <p>Kontakt: ime.prezime@email.com</p>
+</footer></code></pre>
+              </div>
+              <div class="render-box">
+                <span class="label">Rezultat</span>
+                <div class="render-inner">
+                  <div class="demo-card">
+                    <p>Kontakt: ime.prezime@email.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Završni pregled mini projekta</h3>
+              <span class="pill">Primjer 5</span>
+            </div>
+            <p>Kad se svi odvojeni blokovi spoje, dobiješ zaokruženu malu stranicu.</p>
+            <div class="render-box">
+              <span class="label">Rezultat</span>
+              <div class="render-inner portfolio-demo">
+                <section class="portfolio-hero">
+                  <h1>Ime Prezime</h1>
+                  <p>Učenik koji gradi svoje prve web projekte koristeći HTML i CSS.</p>
+                  <a class="demo-button" href="#">Kontakt</a>
+                </section>
+                <section class="portfolio-skills">
+                  <div>HTML5</div>
+                  <div>CSS3</div>
+                  <div>Responsive</div>
+                  <div>Flexbox</div>
+                </section>
+                <section class="portfolio-projects">
+                  <article>
+                    <h3>Edukativna web stranica</h3>
+                    <p>Višestranični završni rad s primjerima i live editorom.</p>
+                  </article>
+                  <article>
+                    <h3>Portfolio vježba</h3>
+                    <p>Mala osobna stranica sa sadržajem i karticama projekata.</p>
+                  </article>
+                </section>
+              </div>
+            </div>
+          </article>
+
+          <div class="info-grid">
+            <p class="tip"><strong>Savjet:</strong> Prvo složi strukturu, pa onda stilizaciju. Tako ćeš lakše pratiti proces izrade.</p>
+            <p class="mistake"><strong>Česta pogreška:</strong> Nemoj odmah pokušati uljepšati svaki detalj. Najprije neka sve radi i bude pregledno.</p>
+            <p class="exercise"><strong>Vježba:</strong> Uredi ovaj mini projekt tako da koristi tvoje ime, tvoje vještine i dva vlastita projekta ili zamišljena rada.</p>
+          </div>
+        </section>
+      </main>
+
+      
+    </div>
+  </div>
+</body>
+</html>

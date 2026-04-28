@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gotovi primjeri komponenti i working live preview editor za HTML i CSS.">
+  <title>Web Učilica | Primjeri</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
+
+  <div class="site-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">&lt;/&gt;</div>
+        <div>
+          <strong>Web Učilica</strong>
+          <p>HTML &amp; CSS vodič</p>
+        </div>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">🌙 Tamna tema</button>
+      <nav class="sidebar-nav" aria-label="Glavna navigacija">
+        <a class="nav-link" href="index.html">Početna</a>
+        <a class="nav-link" href="html-osnove.html">HTML osnove</a>
+        <a class="nav-link" href="html-elementi.html">HTML elementi</a>
+        <a class="nav-link" href="css-osnove.html">CSS osnove</a>
+        <a class="nav-link" href="css-layout.html">CSS layout</a>
+        <a class="nav-link" href="primjeri.html">Primjeri</a>
+        <a class="nav-link" href="mini-projekt.html">Mini projekt</a>
+
+      </nav>
+    </aside>
+
+    <div class="page">
+      <header class="topbar">
+        <p class="breadcrumbs">Web Učilica / Primjeri</p>
+        <span class="badge">Komponente i editor</span>
+      </header>
+
+      <main id="glavni-sadrzaj" class="content" tabindex="-1">
+        <section class="hero">
+          <div class="hero-grid">
+            <div>
+              <h1>Gotovi primjeri i live editor</h1>
+              <p>Ovdje se teorija pretvara u praksu. U nastavku su gotove male komponente koje možeš rastaviti i proučiti, a zatim i pravi editor u kojem odmah vidiš rezultat vlastitog HTML-a i CSS-a.</p>
+            </div>
+            <div class="panel">
+              <h3>Zašto je ovo važno</h3>
+              <p>Kad vidiš kako se male komponente grade, kasnije lakše slažeš cijelu stranicu. To je prijelaz iz učenja pojedinačnih elemenata u stvarno izrađivanje dizajna.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson">
+          <div class="lesson-head">
+            <div>
+              <h2>Komponente koje se često koriste</h2>
+              <p>Obavijesti, kartice i FAQ blokovi javljaju se na gotovo svakoj modernoj stranici.</p>
+            </div>
+            <span class="pill">Primjena znanja</span>
+          </div>
+
+          <div class="example-grid">
+            <article class="example-card">
+              <div class="example-head">
+                <h3>Primjer alert poruke</h3>
+                <span class="pill">Primjer 1</span>
+              </div>
+              <p>Ovakav blok je dobar za važne obavijesti, pogreške ili istaknute poruke.</p>
+              <div class="split-example">
+                <div class="code-box">
+                  <span class="label">Kod</span>
+                  <pre><code data-lang="html"><div class="demo-alert">
+  Važna obavijest: rok za predaju je u petak.
+</div></code></pre>
+                </div>
+                <div class="render-box">
+                  <span class="label">Rezultat</span>
+                  <div class="render-inner">
+                    <div class="demo-alert">Važna obavijest: rok za predaju je u petak.</div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="example-card">
+              <div class="example-head">
+                <h3>Primjer kartice članka</h3>
+                <span class="pill">Primjer 2</span>
+              </div>
+              <p>Kartice su odlične za prikaz sažetaka sadržaja, projekata ili lekcija.</p>
+              <div class="split-example">
+                <div class="code-box">
+                  <span class="label">Kod</span>
+                  <pre><code data-lang="html"><article class="demo-card">
+  <span class="demo-chip">HTML</span>
+  <h3>Osnove semantike</h3>
+  <p>Nauči razliku između header, nav, main i footer elemenata.</p>
+</article></code></pre>
+                </div>
+                <div class="render-box">
+                  <span class="label">Rezultat</span>
+                  <div class="render-inner">
+                    <article class="demo-card">
+                      <span class="demo-chip">HTML</span>
+                      <h3>Osnove semantike</h3>
+                      <p>Nauči razliku između header, nav, main i footer elemenata.</p>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="example-card">
+              <div class="example-head">
+                <h3>Primjer mreže lekcija</h3>
+                <span class="pill">Primjer 3</span>
+              </div>
+              <p>Više kartica zajedno čini preglednu početnu stranicu edukativnog weba.</p>
+              <div class="split-example">
+                <div class="code-box">
+                  <span class="label">Kod</span>
+                  <pre><code data-lang="html"><section class="lesson-cards-demo">
+  <article>HTML osnove</article>
+  <article>HTML elementi</article>
+  <article>CSS osnove</article>
+  <article>CSS layout</article>
+</section></code></pre>
+                </div>
+                <div class="render-box">
+                  <span class="label">Rezultat</span>
+                  <div class="render-inner">
+                    <section class="lesson-cards-demo">
+                      <article>HTML osnove</article>
+                      <article>HTML elementi</article>
+                      <article>CSS osnove</article>
+                      <article>CSS layout</article>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="example-card">
+              <div class="example-head">
+                <h3>Primjer FAQ bloka</h3>
+                <span class="pill">Primjer 4</span>
+              </div>
+              <p><code>details</code> i <code>summary</code> stvaraju pregledno pitanje-odgovor sučelje bez frameworka.</p>
+              <div class="split-example">
+                <div class="code-box">
+                  <span class="label">Kod</span>
+                  <pre><code data-lang="html"><details>
+  <summary>Moram li znati JavaScript?</summary>
+  <p>Za ovaj projekt dovoljan je minimalni JS.</p>
+</details></code></pre>
+                </div>
+                <div class="render-box">
+                  <span class="label">Rezultat</span>
+                  <div class="render-inner faq-demo">
+                    <details open>
+                      <summary>Moram li znati JavaScript?</summary>
+                      <p>Za ovaj projekt dovoljan je minimalni JS.</p>
+                    </details>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="live-editor" data-live-editor>
+          <div class="lesson-head">
+            <div>
+              <h2>Try it Yourself editor</h2>
+              <p>Upiši svoj HTML i CSS, klikni na gumb i odmah pogledaj rezultat u desnom okviru.</p>
+            </div>
+            <span class="pill">Interaktivni primjer</span>
+          </div>
+
+          <div class="editor-grid">
+            <div>
+              <label for="live-html">HTML kod</label>
+              <textarea id="live-html" data-role="html-input"><section class="kartica">
+  <h1>Moja vježba</h1>
+  <p>Ovo je tekst unutar kartice.</p>
+  <button>Pošalji</button>
+</section></textarea>
+            </div>
+
+            <div>
+              <label for="live-css">CSS kod</label>
+              <textarea id="live-css" data-role="css-input">body {
+  background: #f8fafc;
+}
+
+.kartica {
+  max-width: 360px;
+  margin: 20px auto;
+  padding: 24px;
+  border-radius: 16px;
+  background: white;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+h1 {
+  color: #0f766e;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+}</textarea>
+            </div>
+          </div>
+
+          <div class="editor-actions">
+            <button class="demo-button" type="button" data-role="run">Prikaži rezultat</button>
+            <button class="theme-toggle" type="button" data-role="reset">Vrati početni primjer</button>
+          </div>
+
+          <iframe class="preview-frame" title="Live preview HTML i CSS koda" data-role="preview"></iframe>
+
+          <div class="info-grid">
+            <p class="tip"><strong>Savjet:</strong> Najprije promijeni samo jednu stvar, primjerice boju naslova. Tako ćeš lakše razumjeti što se točno dogodilo.</p>
+            <p class="mistake"><strong>Česta pogreška:</strong> Ako odjednom promijeniš previše redaka, teže je pratiti što je izazvalo određeni rezultat.</p>
+            <p class="exercise"><strong>Vježba:</strong> Dodaj drugu tipku, promijeni pozadinu kartice i umetni još jedan paragraf u HTML.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Sljedeći korak: prijeđi na <a href="mini-projekt.html">Mini projekt</a> i složi malu završnu stranicu korak po korak.</p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

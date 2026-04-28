@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flexbox, Grid i responzivni layout za moderne web stranice.">
+  <title>Web Učilica | CSS layout</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
+
+  <div class="site-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">&lt;/&gt;</div>
+        <div>
+          <strong>Web Učilica</strong>
+          <p>HTML &amp; CSS vodič</p>
+        </div>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">🌙 Tamna tema</button>
+      <nav class="sidebar-nav" aria-label="Glavna navigacija">
+        <a class="nav-link" href="index.html">Početna</a>
+        <a class="nav-link" href="html-osnove.html">HTML osnove</a>
+        <a class="nav-link" href="html-elementi.html">HTML elementi</a>
+        <a class="nav-link" href="css-osnove.html">CSS osnove</a>
+        <a class="nav-link" href="css-layout.html">CSS layout</a>
+        <a class="nav-link" href="primjeri.html">Primjeri</a>
+        <a class="nav-link" href="mini-projekt.html">Mini projekt</a>
+     
+      </nav>
+    </aside>
+
+    <div class="page">
+      <header class="topbar">
+        <p class="breadcrumbs">Web Učilica / CSS layout</p>
+        <span class="badge">Flexbox i Grid</span>
+      </header>
+
+      <main id="glavni-sadrzaj" class="content" tabindex="-1">
+        <section class="hero">
+          <div class="hero-grid">
+            <div>
+              <h1>CSS layout</h1>
+              <p>Layout je način na koji sadržaj raspoređuješ po stranici. Najvažniji moderni alati su Flexbox i Grid. Flexbox je odličan za jedan red ili stupac elemenata, a Grid za složenije mreže i više dimenzija.</p>
+            </div>
+            <div class="panel">
+              <h3>Kad koristiti što</h3>
+              <ul class="list-clean">
+                <li>Flexbox: nav, gumbi, redovi kartica, poravnanje</li>
+                <li>Grid: galerije, dashboard, mreža kartica, glavni raspored</li>
+                <li>Media query: prilagodba širini zaslona</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson">
+          <div class="lesson-head">
+            <div>
+              <h2>Flexbox u praksi</h2>
+              <p>Flexbox je najčešći izbor za navigacije, gumbe i kartice koje se trebaju uredno poravnati.</p>
+            </div>
+            <span class="pill">Jedna dimenzija</span>
+          </div>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Primjer horizontalne navigacije</h3>
+              <span class="pill">Primjer 1</span>
+            </div>
+            <p>Jednim pravilom dobivaš uredan red elemenata i lakše poravnanje po osi.</p>
+            <div class="split-example">
+              <div class="code-box">
+                <span class="label">Kod</span>
+                <pre><code data-lang="css">.menu {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}</code></pre>
+              </div>
+              <div class="render-box">
+                <span class="label">Rezultat</span>
+                <div class="render-inner">
+                  <div class="flex-demo">
+                    <div>Početna</div>
+                    <div>HTML</div>
+                    <div>CSS</div>
+                    <div>Kontakt</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Primjer kartica koje se prelamaju</h3>
+              <span class="pill">Primjer 2</span>
+            </div>
+            <p>Kad nema dovoljno mjesta, elementi mogu prijeći u novi red pomoću <code>flex-wrap</code>.</p>
+            <div class="split-example">
+              <div class="code-box">
+                <span class="label">Kod</span>
+                <pre><code data-lang="css">.kartice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.kartice article {
+  flex: 1 1 140px;
+}</code></pre>
+              </div>
+              <div class="render-box">
+                <span class="label">Rezultat</span>
+                <div class="render-inner">
+                  <div class="flex-wrap-demo">
+                    <div>HTML</div>
+                    <div>CSS</div>
+                    <div>Flexbox</div>
+                    <div>Grid</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="info-grid">
+            <p class="tip"><strong>Savjet:</strong> Kad želiš poravnanje u jednom smjeru, prvo pomisli na Flexbox.</p>
+            <p class="mistake"><strong>Česta pogreška:</strong> Početnici često pokušaju napraviti cijeli kompleksan layout samo Flexboxom, iako bi Grid bio čistije rješenje.</p>
+            <p class="exercise"><strong>Vježba:</strong> Napravi red od tri gumba koji se na manjem ekranu prelamaju ispod jedan drugog.</p>
+          </div>
+        </section>
+
+        <section class="lesson">
+          <div class="lesson-head">
+            <div>
+              <h2>Grid i responzivni raspored</h2>
+              <p>Grid je idealan za galerije, sekcije s više kartica i dvostupčane rasporede.</p>
+            </div>
+            <span class="pill">Dvije dimenzije</span>
+          </div>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Primjer Grid mreže</h3>
+              <span class="pill">Primjer 3</span>
+            </div>
+            <p>Grid stvara mrežu redaka i stupaca, pa je izvrstan za složenije rasporede.</p>
+            <div class="split-example">
+              <div class="code-box">
+                <span class="label">Kod</span>
+                <pre><code data-lang="css">.mreza {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}</code></pre>
+              </div>
+              <div class="render-box">
+                <span class="label">Rezultat</span>
+                <div class="render-inner">
+                  <div class="grid-demo">
+                    <div>HTML</div>
+                    <div>CSS</div>
+                    <div>JS</div>
+                    <div>UI</div>
+                    <div>UX</div>
+                    <div>SEO</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Primjer responzivnog rasporeda</h3>
+              <span class="pill">Primjer 4</span>
+            </div>
+            <p>Media query mijenja raspored na većim širinama zaslona. To je bit mobile-first pristupa.</p>
+            <div class="split-example">
+              <div class="code-box">
+                <span class="label">Kod</span>
+                <pre><code data-lang="css">.layout {
+  display: grid;
+  gap: 12px;
+}
+
+@media (min-width: 760px) {
+  .layout {
+    grid-template-columns: 2fr 1fr;
+  }
+}</code></pre>
+              </div>
+              <div class="render-box">
+                <span class="label">Rezultat</span>
+                <div class="render-inner">
+                  <div class="responsive-demo">
+                    <div>Glavni sadržaj</div>
+                    <div>Sidebar</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="info-grid">
+            <p class="tip"><strong>Savjet:</strong> Kreni od jednostavnog rasporeda za mobitel i tek onda proširi layout za veće ekrane.</p>
+            <p class="mistake"><strong>Česta pogreška:</strong> Nemoj dizajnirati samo za desktop. Uvijek pogledaj kako stranica izgleda na užoj širini.</p>
+            <p class="exercise"><strong>Vježba:</strong> Napravi mrežu od četiri kartice koja na mobitelu ima jedan stupac, a na većem ekranu dva ili tri.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Sljedeći korak: prijeđi na <a href="primjeri.html">Primjere</a> i pogledaj gotove komponente te isprobaj live editor.</p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

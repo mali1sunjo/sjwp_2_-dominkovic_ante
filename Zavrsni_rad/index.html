@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Edukativna web stranica za učenje HTML-a i CSS-a kroz primjere, objašnjenja i vježbe.">
+  <title>Web Učilica | Početna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
+
+  <div class="site-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">&lt;/&gt;</div>
+        <div>
+          <strong>Web Učilica</strong>
+          <p>HTML &amp; CSS vodič</p>
+        </div>
+      </div>
+
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">🌙 Tamna tema</button>
+
+      <nav class="sidebar-nav" aria-label="Glavna navigacija">
+        <a class="nav-link" href="index.html">Početna</a>
+        <a class="nav-link" href="html-osnove.html">HTML osnove</a>
+        <a class="nav-link" href="html-elementi.html">HTML elementi</a>
+        <a class="nav-link" href="css-osnove.html">CSS osnove</a>
+        <a class="nav-link" href="css-layout.html">CSS layout</a>
+        <a class="nav-link" href="primjeri.html">Primjeri</a>
+        <a class="nav-link" href="mini-projekt.html">Mini projekt</a>
+      
+      </nav>
+    </aside>
+
+    <div class="page">
+      <header class="topbar">
+        <p class="breadcrumbs">Web Učilica / Početna</p>
+        <span class="badge">Početna lekcija</span>
+      </header>
+
+      <main id="glavni-sadrzaj" class="content" tabindex="-1">
+        <section class="hero">
+          <div class="hero-grid">
+            <div>
+              <h1>Edukativna web stranica za učenje HTML-a i CSS-a</h1>
+              <p>Ova stranica služi kao mali online tečaj za početnike. Cilj je da korisnik korak po korak nauči što je HTML, kako CSS mijenja izgled stranice, kako nastaje layout, te kako se od osnovnih elemenata dolazi do gotovog mini projekta.</p>
+              <div class="inline-link-list">
+                <a class="demo-button" href="html-osnove.html">Kreni s HTML osnovama</a>
+                <a class="demo-button secondary" href="primjeri.html">Isprobaj live editor</a>
+              </div>
+            </div>
+
+            <div class="panel">
+              <h3>Kako koristiti stranicu</h3>
+              <ul class="list-clean">
+                <li>Stranice čitaj redom jer gradivo ide od jednostavnog prema složenijem.</li>
+                <li>Svaki primjer sadrži kod, prikaz rezultata i kratko objašnjenje.</li>
+                <li>Na kraju svake cjeline nalazi se savjet, česta pogreška i mala vježba.</li>
+                <li>Na stranici Primjeri nalazi se pravi editor za isprobavanje koda.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="kpi-grid">
+          <article class="kpi">
+            <h3>Što je HTML</h3>
+            <p>HTML gradi strukturu stranice: naslove, tekst, linkove, slike, tablice i forme.</p>
+          </article>
+          <article class="kpi">
+            <h3>Što je CSS</h3>
+            <p>CSS definira boje, tipografiju, razmake, rasporede i ukupni izgled stranice.</p>
+          </article>
+          <article class="kpi">
+            <h3>Što ćeš napraviti</h3>
+            <p>Na kraju vodiča složit ćeš mali portfolio projekt i razumjeti kako je napravljen.</p>
+          </article>
+        </section>
+
+        <section class="card-grid">
+          <article class="card">
+            <h3>Plan učenja</h3>
+            <p>Prvo savladaj HTML osnove, zatim semantičke elemente, nakon toga CSS i layout. Tek tada prijeđi na gotove primjere i mini projekt.</p>
+          </article>
+          <article class="card">
+            <h3>Zašto je ovo korisno</h3>
+            <p>Umjesto da samo čitaš teoriju, ovdje možeš odmah gledati konkretan kod i rezultat. Takav način učenja čini gradivo preglednijim i lakšim za pamćenje.</p>
+          </article>
+        </section>
+
+        <section class="lesson">
+          <div class="lesson-head">
+            <div>
+              <h2>Kako HTML i CSS rade zajedno</h2>
+              <p>HTML određuje sadržaj, a CSS odlučuje kako će taj sadržaj izgledati.</p>
+            </div>
+            <span class="pill">Uvodni primjeri</span>
+          </div>
+
+          <div class="example-grid">
+            <article class="example-card">
+              <div class="example-head">
+                <h3>Primjer HTML kostura stranice</h3>
+                <span class="pill">HTML</span>
+              </div>
+              <p>Ovo je najmanja verzija jedne web stranice. U njoj se jasno vide <code>head</code> i <code>body</code>.</p>
+              <div class="split-example">
+                <div class="code-box">
+                  <span class="label">Kod</span>
+                  <pre><code data-lang="html"><!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Moja stranica</title>
+</head>
+<body>
+  <h1>Pozdrav!</h1>
+  <p>Ovo je moj prvi HTML dokument.</p>
+</body>
+</html></code></pre>
+                </div>
+                <div class="render-box">
+                  <span class="label">Rezultat</span>
+                  <div class="render-inner">
+                    <h2>Pozdrav!</h2>
+                    <p>Ovo je moj prvi HTML dokument.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="example-card">
+              <div class="example-head">
+                <h3>Primjer osnovnog CSS pravila</h3>
+                <span class="pill">CSS</span>
+              </div>
+              <p>Selektor bira element, a unutar vitičastih zagrada navode se svojstva i vrijednosti.</p>
+              <div class="split-example">
+                <div class="code-box">
+                  <span class="label">Kod</span>
+                  <pre><code data-lang="css">h1 {
+  color: #0f766e;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+}</code></pre>
+                </div>
+                <div class="render-box">
+                  <span class="label">Rezultat</span>
+                  <div class="render-inner selector-demo">
+                    <h2 style="color:#0f766e; text-align:center;">Naslov je obojen</h2>
+                    <p class="lead">Paragraf sada izgleda veće i ugodnije za čitanje.</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="example-card">
+              <div class="example-head">
+                <h3>Primjer HTML + CSS zajedno</h3>
+                <span class="pill">Povezivanje</span>
+              </div>
+              <p>Klasa je dobar način da određeni element stiliziraš drugačije od ostalih.</p>
+              <div class="split-example">
+                <div class="code-box">
+                  <span class="label">Kod</span>
+                  <pre><code data-lang="html"><a class="demo-button" href="#">
+  Otvori sljedeću lekciju
+</a></code></pre>
+                </div>
+                <div class="render-box">
+                  <span class="label">Rezultat</span>
+                  <div class="render-inner">
+                    <a class="demo-button" href="#">Otvori sljedeću lekciju</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="info-grid">
+            <p class="tip"><strong>Savjet:</strong> Uči tako da za svaki primjer prvo pogledaš strukturu HTML-a, a tek onda što CSS vizualno mijenja.</p>
+            <p class="mistake"><strong>Česta pogreška:</strong> Početnici često uče CSS prije nego razumiju HTML strukturu. Tada styling djeluje zbunjujuće.</p>
+            <p class="exercise"><strong>Vježba:</strong> U primjeru promijeni tekst gumba, zatim promijeni boju naslova i provjeri znaš li objasniti što radi svaki red koda.</p>
+          </div>
+        </section>
+
+        <section class="card-grid">
+          <article class="card">
+            <h3>Što ćeš znati nakon ovog vodiča</h3>
+            <ul class="list-clean">
+              <li>napraviti osnovnu HTML strukturu</li>
+              <li>stilizirati tekst, gumbe i kartice</li>
+              <li>koristiti Flexbox i Grid za raspored</li>
+              <li>složiti manji završni projekt</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Preporučeni redoslijed</h3>
+            <p>Kreni na <a href="html-osnove.html">HTML osnove</a>, zatim prijeđi na <a href="html-elementi.html">HTML elemente</a>, pa nastavi na <a href="css-osnove.html">CSS osnove</a>.</p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Web Učilica © <span data-current-year></span>. Edukativni projekt iz HTML-a i CSS-a.</p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

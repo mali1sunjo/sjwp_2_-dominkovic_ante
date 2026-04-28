@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Semantički HTML elementi, tablice, forme i drugi važni elementi.">
+  <title>Web Učilica | HTML elementi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
+
+  <div class="site-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">&lt;/&gt;</div>
+        <div>
+          <strong>Web Učilica</strong>
+          <p>HTML &amp; CSS vodič</p>
+        </div>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">🌙 Tamna tema</button>
+      <nav class="sidebar-nav" aria-label="Glavna navigacija">
+        <a class="nav-link" href="index.html">Početna</a>
+        <a class="nav-link" href="html-osnove.html">HTML osnove</a>
+        <a class="nav-link" href="html-elementi.html">HTML elementi</a>
+        <a class="nav-link" href="css-osnove.html">CSS osnove</a>
+        <a class="nav-link" href="css-layout.html">CSS layout</a>
+        <a class="nav-link" href="primjeri.html">Primjeri</a>
+        <a class="nav-link" href="mini-projekt.html">Mini projekt</a>
+  
+      </nav>
+    </aside>
+
+    <div class="page">
+      <header class="topbar">
+        <p class="breadcrumbs">Web Učilica / HTML elementi</p>
+        <span class="badge">Semantika i struktura</span>
+      </header>
+
+      <main id="glavni-sadrzaj" class="content" tabindex="-1">
+        <section class="hero">
+          <div class="hero-grid">
+            <div>
+              <h1>Važni HTML elementi</h1>
+              <p>Nakon osnovnih oznaka, važno je naučiti semantičke elemente. Oni ne služe samo za izgled, nego opisuju značenje dijelova stranice: navigaciju, glavni sadržaj, članak, pomoćni sadržaj, tablice i forme.</p>
+            </div>
+            <div class="panel">
+              <h3>Zašto je semantika važna</h3>
+              <ul class="list-clean">
+                <li>kod je pregledniji</li>
+                <li>lakše ga je stilizirati</li>
+                <li>bolji je za pristupačnost</li>
+                <li>lakše ga je objasniti na obrani rada</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="lesson">
+          <div class="lesson-head">
+            <div>
+              <h2>Semantička struktura stranice</h2>
+              <p>Umjesto previše generičkih <code>div</code> elemenata, koristi elemente koji jasno opisuju sadržaj.</p>
+            </div>
+            <span class="pill">Semantika</span>
+          </div>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Primjer osnovnog rasporeda stranice</h3>
+              <span class="pill">Primjer 1</span>
+            </div>
+            <p>Ovo je čitljiv i smislen raspored: zaglavlje, navigacija, glavni sadržaj i podnožje.</p>
+            <div class="split-example">
+              <div class="code-box">
+                <span class="label">Kod</span>
+                <pre><code data-lang="html"><header>
+  <h1>Školski portal</h1>
+</header>
+
+<nav>
+  <a href="#">Početna</a>
+  <a href="#">Vijesti</a>
+</nav>
+
+<main>
+  <section>
+    <h2>Najnovije objave</h2>
+    <p>Ovdje ide glavni sadržaj stranice.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Kontakt i autorska prava</p>
+</footer></code></pre>
+              </div>
+              <div class="render-box">
+                <span class="label">Rezultat</span>
+                <div class="render-inner">
+                  <div class="demo-card">
+                    <h2>Školski portal</h2>
+                    <div class="demo-navbar">
+                      <a href="#">Početna</a>
+                      <a href="#">Vijesti</a>
+                    </div>
+                    <p><strong>Najnovije objave</strong></p>
+                    <p>Ovdje ide glavni sadržaj stranice.</p>
+                    <p><small>Kontakt i autorska prava</small></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Primjer section, article i aside</h3>
+              <span class="pill">Primjer 2</span>
+            </div>
+            <p><code>section</code> grupira temu, <code>article</code> predstavlja samostalan sadržaj, a <code>aside</code> dodatne informacije.</p>
+            <div class="split-example">
+              <div class="code-box">
+                <span class="label">Kod</span>
+                <pre><code data-lang="html"><section>
+  <h2>Blog</h2>
+
+  <article>
+    <h3>Kako učiti HTML</h3>
+    <p>Kreni od manjih primjera.</p>
+  </article>
+
+  <aside>
+    <p>Preporuka: vodi vlastite bilješke.</p>
+  </aside>
+</section></code></pre>
+              </div>
+              <div class="render-box">
+                <span class="label">Rezultat</span>
+                <div class="render-inner demo-grid">
+                  <div class="demo-card">
+                    <h2>Blog</h2>
+                    <article class="demo-card">
+                      <h3>Kako učiti HTML</h3>
+                      <p>Kreni od manjih primjera.</p>
+                    </article>
+                  </div>
+                  <aside class="demo-card">
+                    <strong>Napomena</strong>
+                    <p>Preporuka: vodi vlastite bilješke.</p>
+                  </aside>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="info-grid">
+            <p class="tip"><strong>Savjet:</strong> Ako dio sadržaja ima vlastito značenje i mogao bi stajati samostalno, često je dobar kandidat za <code>article</code>.</p>
+            <p class="mistake"><strong>Česta pogreška:</strong> Nemoj koristiti semantičke elemente samo “reda radi”. Pokušaj prije svega razumjeti koju ulogu imaju.</p>
+            <p class="exercise"><strong>Vježba:</strong> Nacrtaj strukturu naslovne stranice škole i odluči što je <code>header</code>, što <code>nav</code>, a što <code>main</code>.</p>
+          </div>
+        </section>
+
+        <section class="lesson">
+          <div class="lesson-head">
+            <div>
+              <h2>Tablice, forme i dodatni elementi</h2>
+              <p>Ovi elementi služe za podatke, unos korisnika i dodatno obogaćivanje sadržaja.</p>
+            </div>
+            <span class="pill">Praktični elementi</span>
+          </div>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Primjer tablice s opisom</h3>
+              <span class="pill">Primjer 3</span>
+            </div>
+            <p>Tablice koristi samo za tablične podatke, ne za raspored stranice.</p>
+            <div class="split-example">
+              <div class="code-box">
+                <span class="label">Kod</span>
+                <pre><code data-lang="html"><table>
+  <caption>Rezultati testa</caption>
+  <thead>
+    <tr>
+      <th>Učenik</th>
+      <th>Bodovi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ana</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td>Marko</td>
+      <td>88</td>
+    </tr>
+  </tbody>
+</table></code></pre>
+              </div>
+              <div class="render-box">
+                <span class="label">Rezultat</span>
+                <div class="render-inner table-wrap">
+                  <table>
+                    <caption>Rezultati testa</caption>
+                    <thead>
+                      <tr>
+                        <th>Učenik</th>
+                        <th>Bodovi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Ana</td>
+                        <td>92</td>
+                      </tr>
+                      <tr>
+                        <td>Marko</td>
+                        <td>88</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Primjer forme s labelama</h3>
+              <span class="pill">Primjer 4</span>
+            </div>
+            <p>Svaki unos treba jasnu labelu kako bi korisnik znao što se traži.</p>
+            <div class="split-example">
+              <div class="code-box">
+                <span class="label">Kod</span>
+                <pre><code data-lang="html"><form>
+  <label for="ime">Ime</label>
+  <input id="ime" type="text">
+
+  <label for="email">E-mail</label>
+  <input id="email" type="email">
+
+  <button type="submit">Pošalji</button>
+</form></code></pre>
+              </div>
+              <div class="render-box">
+                <span class="label">Rezultat</span>
+                <div class="render-inner">
+                  <form class="demo-form" action="#" method="get">
+                    <div>
+                      <label for="ime-demo">Ime</label>
+                      <input id="ime-demo" type="text" placeholder="Upiši ime">
+                    </div>
+                    <div>
+                      <label for="email-demo">E-mail</label>
+                      <input id="email-demo" type="email" placeholder="ime@primjer.hr">
+                    </div>
+                    <button class="demo-button" type="submit">Pošalji</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="example-card">
+            <div class="example-head">
+              <h3>Primjer details i figure</h3>
+              <span class="pill">Primjer 5</span>
+            </div>
+            <p><code>details</code> i <code>summary</code> korisni su za FAQ blokove, a <code>figure</code> i <code>figcaption</code> za slike s opisom.</p>
+            <div class="split-example">
+              <div class="code-box">
+                <span class="label">Kod</span>
+                <pre><code data-lang="html"><details>
+  <summary>Što je HTML?</summary>
+  <p>HTML je jezik za strukturu web stranice.</p>
+</details>
+
+<figure>
+  <img src="grafikon.png" alt="Grafikon rasta">
+  <figcaption>Grafikon prikazuje rast posjeta.</figcaption>
+</figure></code></pre>
+              </div>
+              <div class="render-box">
+                <span class="label">Rezultat</span>
+                <div class="render-inner faq-demo">
+                  <details open>
+                    <summary>Što je HTML?</summary>
+                    <p>HTML je jezik za strukturu web stranice.</p>
+                  </details>
+                  <figure class="demo-card">
+                    <div class="placeholder-figure">📊</div>
+                    <figcaption>Grafikon prikazuje rast posjeta.</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="info-grid">
+            <p class="tip"><strong>Savjet:</strong> Tablica nek ima naslov, a forma jasne oznake i smislen redoslijed polja.</p>
+            <p class="mistake"><strong>Česta pogreška:</strong> Nemoj koristiti tablice za raspored cijele stranice. Za raspored koristi CSS.</p>
+            <p class="exercise"><strong>Vježba:</strong> Napravi malu formu za prijavu na radionicu i tablicu s tri polaznika i njihovim rezultatima.</p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>Sljedeći korak: otvori <a href="css-osnove.html">CSS osnove</a> i nauči kako ovim elementima dati izgled.</p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
